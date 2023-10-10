@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "6d8d03c9-8555-4cbd-a5b6-f372c0bf8a77",
+		"name": "Productos_Queries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26654415"
+	},
+	"item": [
+		{
+			"name": "Crear_Nuevo_Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Cámara DSLR\",\r\n    \"price\": 180,\r\n    \"description\": \"Cámara réflex digital de alta calidad\",\r\n    \"category\": \"Fotografía\",\r\n    \"image\": \"imagen_camara\",\r\n    \"rating\": {\r\n        \"rate\": 9.0,\r\n        \"count\": 5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rating\": {\r\n        \"count\": 4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Traer_Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Traer-Producto_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Producto_precio_mayorA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/mayor?precioMinimo=150",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"mayor"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "150"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar_Producto_precio_entre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/entre?precioMinimo=100&precioMaximo=180",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"entre"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "100"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "180"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

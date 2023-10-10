@@ -1,16 +1,14 @@
 package com.facu.restfake.services;
 
 
-import com.facu.restfake.entities.Product;
+import com.facu.restfake.entities.Producto;
 
+import java.util.List;
 
+public interface ProductoService extends BaseService<Producto,Long> {
 
-public interface ProductoService extends BaseService<Product,Long> {
-
-
-
-
-
+    List<Producto> buscarPorPrecioMayorA(Double precioMinimo) throws Exception;
+    List<Producto> buscarPorPrecioEntre(Double precioMinimo, Double precioMaximo) throws Exception;
 }
 
 

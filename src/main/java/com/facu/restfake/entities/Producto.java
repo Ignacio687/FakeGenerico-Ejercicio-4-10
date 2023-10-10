@@ -11,12 +11,12 @@ import org.antlr.v4.runtime.misc.NotNull;
 import java.math.BigDecimal;
 
 @Entity
-
+@Table
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Product  extends Base {
+public class Producto extends Base {
 
 
     @NotNull
